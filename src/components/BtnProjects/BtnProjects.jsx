@@ -1,16 +1,31 @@
-import React, { useState } from 'react'
-import technologies from '../../data/technologies'
+import React from 'react'
 
-const BtnProjects = () => {
+
+const BtnProjects = ({ seletcCategori }) => {
+
+
+  const btnTechno = [{ id: 0, name: 'All' }, { id: 1, name: 'React' }, { id: 2, name: 'Mongodb' }, { id: 3, name: 'API' }, { id: 4, name: 'Js' }]
+
+  function btnActive(id) {
+    const botones = document.getElementsByClassName('boton')
+    for (let i = 0; i < botones.length; i++) {
+
+      botones[i].classList.remove('bg-blue-300')
+    }
+    botones[id].classList.toggle('bg-blue-300')
+  }
+
   return (
-    <div className='flex flex-wrap gap-2 hover:cursor-pointer' >
-      {technologies.map((datos) => {
-        return (
-          <div className='rounded-xl h-[2rem] w-[6rem] bg-black hover:bg-slate-500 hover:text-black text-white border-white border-2'>
-            <span>{datos.categori}</span>
-          </div>
-        )
-      })}
+    <div className='flex flex-wrap gap-2 hover:cursor-pointer justify-center' >
+      <div className='flex gap-4' role="group">
+        {btnTechno.map((datos) => {
+          return (
+            <button onClick={() => { seletcCategori(datos.name); btnActive(datos.id) }} id={datos.id} type="button" className='boton rounded-xl h-[2rem] w-[5rem] bg-black  text-white border-white border-2' key={datos.id}>
+              <span>{datos.name}</span>
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }
