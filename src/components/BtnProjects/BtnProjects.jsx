@@ -16,11 +16,11 @@ const BtnProjects = ({ seletcCategori }) => {
   }
 
   return (
-    <div className='flex flex-wrap gap-2 hover:cursor-pointer justify-center' >
-      <div className='flex gap-4' role="group">
+    <div className='flex  gap-2 hover:cursor-pointer' >
+      <div className='flex gap-4 flex-wrap justify-center' role="group">
         {btnTechno.map((datos) => {
           return (
-            <button onClick={() => { seletcCategori(datos.name); btnActive(datos.id) }} id={datos.id} type="button" className='boton rounded-xl h-[2rem] w-[5rem] bg-black  text-white border-white border-2' key={datos.id}>
+            <button onClick={() => { seletcCategori(datos.name); btnActive(datos.id) }} id={datos.id} type="button" className='boton rounded-xl h-[2rem] w-[5rem] bg-blue-300  text-white border-white border-2' key={datos.id}>
               <span>{datos.name}</span>
             </button>
           )

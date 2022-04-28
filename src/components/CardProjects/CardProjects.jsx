@@ -18,16 +18,16 @@ const CardProjects = () => {
   }
 
   return (
-    <div>
-      <div className="w-full py-2 bg-red-500 rounded-t-xl flex flex-row justify-center">
+    <div className="mb-10">
+      <div className="w-full py-2  rounded-t-xl flex flex-row justify-center">
         <HeaderContProjects seletcCategori={seletcCategori}/>
       </div>
-      <div className="grid grid-cols-1  gap-x-[10rem] md:grid-cols-3 ">
+      <div className="grid grid-cols-1  gap-x-3 md:grid-cols-4">
 
         {data.map((datos) => {
           return (
-            <div className=" flex flex-col  items-center mt-12 mb-5 " key={datos.id}>
-              <div className="md:h-[8rem] md:w-[15rem]  w-60 h-36   rounded-t-lg border-2">
+            <div className=" flex flex-col  items-center mt-6 mb-1" key={datos.id}>
+              <div className="md:h-[8rem] md:w-[15rem]  w-60 h-36 rounded-t-lg border-2">
 
               </div>
 

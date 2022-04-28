@@ -3,7 +3,7 @@ import Cont from '../Cont/Cont'
 
 const ContProjects = () => {
   return (
-    <div className='w-full h-screen bg-white flex pt-[11rem] justify-center border-2'>
+    <div className='w-full  flex pt-[2rem] justify-center h-max'>
       <Cont/>
     </div>
   )
